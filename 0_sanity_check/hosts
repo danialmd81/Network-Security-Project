@@ -1,0 +1,7 @@
+172.16.3.64 vpn  #ports 1194/openvpn 2200/ssh
+172.16.3.65 c2  #ports 8080/tcp
+172.16.3.66 website  #ports 80/http
+172.16.3.67 mail  #ports 2200/ssh 443/http
+172.16.3.68 auction  #ports 80/http
+172.16.3.69 remote-client  #ports 2200/ssh
+TUFaQVBBXzJlODhiZTk3MmM3OTUzY2E0YTg5NDA3MzE4MzM5M2U5
