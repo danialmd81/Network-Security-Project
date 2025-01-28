@@ -1,18 +1,18 @@
 Return-Path: rezaee@petromaz.ir
 Received: from localhost (LHLO mail.petromaz.ir) (127.0.0.1) by
- mail.petromaz.ir with LMTP; Sun, 19 Jan 2025 15:07:39 +0000 (UTC)
-Received: from [10.233.107.174] (mail [10.233.107.174])
-	by mail.petromaz.ir (Postfix) with ESMTPSA id EA242220934
-	for <pirouz@petromaz.ir>; Sun, 19 Jan 2025 15:07:38 +0000 (UTC)
-Content-Type: multipart/mixed; boundary="===============9036474276570974890=="
+ mail.petromaz.ir with LMTP; Mon, 27 Jan 2025 14:31:44 +0000 (UTC)
+Received: from [10.233.100.153] (mail [10.233.100.153])
+	by mail.petromaz.ir (Postfix) with ESMTPSA id D14F2102A2B
+	for <pirouz@petromaz.ir>; Mon, 27 Jan 2025 14:31:44 +0000 (UTC)
+Content-Type: multipart/mixed; boundary="===============3779550118454562254=="
 MIME-Version: 1.0
 From: rezaee@petromaz.ir
 To: pirouz@petromaz.ir
 Subject: =?utf-8?b?2YHYp9uM2YQg2b7Yp9uM2KrZiNmGINin2LPaqdin2K/Ypw==?=
-Message-Id: <20250119150738.EA242220934@mail.petromaz.ir>
-Date: Sun, 19 Jan 2025 15:07:38 +0000 (UTC)
+Message-Id: <20250127143144.D14F2102A2B@mail.petromaz.ir>
+Date: Mon, 27 Jan 2025 14:31:44 +0000 (UTC)
 
---===============9036474276570974890==
+--===============3779550118454562254==
 Content-Type: text/plain; charset="utf-8"
 MIME-Version: 1.0
 Content-Transfer-Encoding: base64
@@ -21,7 +21,7 @@ Content-Transfer-Encoding: base64
 2Kfar9uMINiv2KfYsdmH2Iwg2YTYt9mB2Kcg2YHYp9uM2YQg2b7Yp9uM2KrZiNmG2LQg2LHYpyDb
 jNmHINio2LHYsdiz24wg2KjaqdmG
 
---===============9036474276570974890==
+--===============3779550118454562254==
 Content-Type: application/octet-stream; Name="email6/scada-source.zip"
 MIME-Version: 1.0
 Content-Transfer-Encoding: base64
@@ -38,4 +38,4 @@ rBOS64abq20Td1jQ6id99leWMC3ZF1BLBwg+ZEwNYQEAANkCAABQSwECFAMUAAgACABBs2ZYPmRM
 DWEBAADZAgAABgAgAAAAAAAAAAAA/YEAAAAAYXBwLnB5VVQNAAdDvOhlQtboZTzW6GV1eAsAAQTo
 AwAABOgDAABQSwUGAAAAAAEAAQBUAAAAtQEAAAAA
 
---===============9036474276570974890==--
+--===============3779550118454562254==--

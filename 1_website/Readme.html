@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Readme</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <style type="text/css">body {
+font-family: Arial, sans-serif;
+line-height: 1.6;
+background-color: #121212;
+color: #e0e0e0;
+padding: 20px;
+}
+h1, h2, h3, h4, h5, h6 {
+color: #ff9800; 
+}
+code {
+background-color: #333;
+padding: 2px 4px;
+border-radius: 4px;
+font-family: 'Courier New', Courier, monospace;
+color: #ff5722; 
+}
+pre {
+background-color: #333;
+padding: 10px;
+border-radius: 4px;
+overflow-x: auto;
+color: #ff5722; 
+}
+a {
+color: #bb86fc;
+text-decoration: none;
+}
+a:hover {
+text-decoration: underline;
+}
+ul {
+margin: 20px 0;
+padding: 0 20px;
+border-left: 2px solid #ff9800; 
+}
+li {
+margin: 10px 0;
+}
+strong {
+color: #ff9800; 
+}
+</style>
+</head>
+<body>
+<h1 id="web">Web</h1>
+<ol type="1">
+<li><p><strong>Address:</strong> <code>172.16.3.66</code></p></li>
+<li><p><strong>Use BurpSuite to:</strong></p>
+<ol type="1">
+<li>Set Header: <code>Referer: https://google.com</code></li>
+<li>Set <code>User-Agent</code> to <code>WorldWideWeb</code></li>
+</ol></li>
+<li><p><strong>Use Cookie-Editor extension in Chrome to:</strong></p>
+<ol type="1">
+<li>Set Cookie <code>test_completed=true</code></li>
+</ol></li>
+<li><p><strong>Go To:</strong> <code>http://172.16.3.66/index.php</code></p></li>
+<li><p><strong>Go To:</strong> <code>http://172.16.3.66/media</code></p></li>
+<li><p><strong>Download DB:</strong> <code>http://172.16.3.66/media/database.db</code> into <a href="./database.db">database.db</a></p></li>
+<li><p><strong>Open it and Get Username and Password:</strong></p>
+<pre class="text"><code>Username: admin
+Password: 0e745304954233478109486485467426</code></pre></li>
+<li><p><strong>Type Juggling:</strong> <code>0e... == 0e...</code>, Sample: <a href="./TupeJug.php">TypeJuggling.php</a></p></li>
+<li><p><strong>Magic Hashes List for <code>Md5</code>:</strong> <a href="https://github.com/spaze/hashes/blob/master/md5.md">Useful TypeJuggling Hashes</a></p></li>
+<li><p><strong>Login:</strong> <code>admin</code>, <code>240610708</code></p>
+<pre class="text"><code>md5(X) = Starts With Number (0-9...)
+md5(240610708) = 0e462097431906509019562988736854</code></pre></li>
+<li><p><strong>Flag:</strong> <code>MAZAPA_7f90181e652faf6e9f3fb1532f290f89</code></p></li>
+</ol>
+</body>
+</html>

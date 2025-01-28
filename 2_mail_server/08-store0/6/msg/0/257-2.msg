@@ -1,18 +1,18 @@
 Return-Path: rezaee@petromaz.ir
 Received: from localhost (LHLO mail.petromaz.ir) (127.0.0.1) by
- mail.petromaz.ir with LMTP; Sun, 19 Jan 2025 15:07:38 +0000 (UTC)
-Received: from [10.233.107.174] (mail [10.233.107.174])
-	by mail.petromaz.ir (Postfix) with ESMTPSA id C5DD722090C
-	for <pirouz@petromaz.ir>; Sun, 19 Jan 2025 15:07:38 +0000 (UTC)
-Content-Type: multipart/mixed; boundary="===============5327543371285321591=="
+ mail.petromaz.ir with LMTP; Mon, 27 Jan 2025 14:31:44 +0000 (UTC)
+Received: from [10.233.100.153] (mail [10.233.100.153])
+	by mail.petromaz.ir (Postfix) with ESMTPSA id 69047102A14
+	for <pirouz@petromaz.ir>; Mon, 27 Jan 2025 14:31:44 +0000 (UTC)
+Content-Type: multipart/mixed; boundary="===============6982602987072336315=="
 MIME-Version: 1.0
 From: rezaee@petromaz.ir
 To: pirouz@petromaz.ir
 Subject: =?utf-8?b?2Kfaqdin2YbYqiBWUE4=?=
-Message-Id: <20250119150738.C5DD722090C@mail.petromaz.ir>
-Date: Sun, 19 Jan 2025 15:07:38 +0000 (UTC)
+Message-Id: <20250127143144.69047102A14@mail.petromaz.ir>
+Date: Mon, 27 Jan 2025 14:31:44 +0000 (UTC)
 
---===============5327543371285321591==
+--===============6982602987072336315==
 Content-Type: text/plain; charset="utf-8"
 MIME-Version: 1.0
 Content-Transfer-Encoding: base64
@@ -20,7 +20,7 @@ Content-Transfer-Encoding: base64
 2LPZhNin2YUg2Kfaqdin2YbYqiB2cG4g2LPYp9iu2KrZhyDYtNivINmIINmB2KfbjNmE4oCM2YfY
 p9uMINmF2YjYsdivINmG24zYp9iyINm+24zZiNiz2Kog2q/Ysdiv24zYry4=
 
---===============5327543371285321591==
+--===============6982602987072336315==
 Content-Type: application/octet-stream; Name="email5/vpn.zip"
 MIME-Version: 1.0
 Content-Transfer-Encoding: base64
@@ -62,4 +62,4 @@ FAAJAGMAIZpiWPxLIrG8AAAAvQAAAA8AKwAAAAAAAAAAAKSBQQUAAHZwbi9jbGllbnQub3ZwblVU
 DQAH9knjZfZJ42X2SeNldXgLAAEE6AMAAAToAwAAAZkHAAEAQUUDCABQSwUGAAAAAAMAAwAdAQAA
 ZQYAAAAA
 
---===============5327543371285321591==--
+--===============6982602987072336315==--

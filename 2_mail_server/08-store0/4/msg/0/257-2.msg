@@ -1,18 +1,18 @@
 Return-Path: rezaee@petromaz.ir
 Received: from localhost (LHLO mail.petromaz.ir) (127.0.0.1) by
- mail.petromaz.ir with LMTP; Sun, 19 Jan 2025 15:07:38 +0000 (UTC)
-Received: from [10.233.107.174] (mail [10.233.107.174])
-	by mail.petromaz.ir (Postfix) with ESMTPSA id 816512208DE
-	for <mansouri@petromaz.ir>; Sun, 19 Jan 2025 15:07:38 +0000 (UTC)
-Content-Type: multipart/mixed; boundary="===============5630279120638050834=="
+ mail.petromaz.ir with LMTP; Mon, 27 Jan 2025 14:31:43 +0000 (UTC)
+Received: from [10.233.100.153] (mail [10.233.100.153])
+	by mail.petromaz.ir (Postfix) with ESMTPSA id B543F10181C
+	for <mansouri@petromaz.ir>; Mon, 27 Jan 2025 14:31:43 +0000 (UTC)
+Content-Type: multipart/mixed; boundary="===============3238635529347964465=="
 MIME-Version: 1.0
 From: rezaee@petromaz.ir
 To: mansouri@petromaz.ir
 Subject: =?utf-8?b?2K/Ysdiu2YjYp9iz2Kog2K/Ys9iq2LHYs9uMINio2Ycg2LPYsdmI2LE=?=
-Message-Id: <20250119150738.816512208DE@mail.petromaz.ir>
-Date: Sun, 19 Jan 2025 15:07:38 +0000 (UTC)
+Message-Id: <20250127143143.B543F10181C@mail.petromaz.ir>
+Date: Mon, 27 Jan 2025 14:31:43 +0000 (UTC)
 
---===============5630279120638050834==
+--===============3238635529347964465==
 Content-Type: text/plain; charset="utf-8"
 MIME-Version: 1.0
 Content-Transfer-Encoding: base64
@@ -34,4 +34,4 @@ N21EZS84TE52eTFzY0thdERDblpzTWtmZHRkcjJpTkM5QS8zdGNKeGdjTllQNTlwaTJFTFZhTDUx
 WE1FcHk1RFBLQXJuaWtmdEMrR1doTzJHc2ZmS0ZvKzZYUTRZZlRvbU15QWR3aklUTW5OdVJvbC9s
 WGpmLwo=
 
---===============5630279120638050834==--
+--===============3238635529347964465==--

@@ -1,6 +1,6 @@
 Return-Path: admin@petromaz.ir
 Received: from localhost (LHLO mail.petromaz.ir) (127.0.0.1) by
- mail.petromaz.ir with LMTP; Sun, 19 Jan 2025 15:06:04 +0000 (UTC)
+ mail.petromaz.ir with LMTP; Mon, 27 Jan 2025 14:26:54 +0000 (UTC)
 Received: from localhost (localhost [127.0.0.1])
 	by mail.petromaz.ir (Postfix) with ESMTP id 20BBC6004E8
 	for <admin@petromaz.ir>; Mon, 30 Dec 2024 20:44:34 +0000 (UTC)

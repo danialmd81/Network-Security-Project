@@ -1,18 +1,18 @@
 Return-Path: moradi@petromaz.ir
 Received: from localhost (LHLO mail.petromaz.ir) (127.0.0.1) by
- mail.petromaz.ir with LMTP; Sun, 19 Jan 2025 15:07:38 +0000 (UTC)
-Received: from [10.233.107.174] (mail [10.233.107.174])
-	by mail.petromaz.ir (Postfix) with ESMTPSA id 8CDE22208E0
-	for <savad-koohi@petromaz.ir>; Sun, 19 Jan 2025 15:07:38 +0000 (UTC)
-Content-Type: multipart/mixed; boundary="===============4259780372128628395=="
+ mail.petromaz.ir with LMTP; Mon, 27 Jan 2025 14:31:43 +0000 (UTC)
+Received: from [10.233.100.153] (mail [10.233.100.153])
+	by mail.petromaz.ir (Postfix) with ESMTPSA id C4382102A18
+	for <savad-koohi@petromaz.ir>; Mon, 27 Jan 2025 14:31:43 +0000 (UTC)
+Content-Type: multipart/mixed; boundary="===============4195088438138059001=="
 MIME-Version: 1.0
 From: moradi@petromaz.ir
 To: savad-koohi@petromaz.ir
 Subject: software
-Message-Id: <20250119150738.8CDE22208E0@mail.petromaz.ir>
-Date: Sun, 19 Jan 2025 15:07:38 +0000 (UTC)
+Message-Id: <20250127143143.C4382102A18@mail.petromaz.ir>
+Date: Mon, 27 Jan 2025 14:31:43 +0000 (UTC)
 
---===============4259780372128628395==
+--===============4195088438138059001==
 Content-Type: text/plain; charset="utf-8"
 MIME-Version: 1.0
 Content-Transfer-Encoding: base64
@@ -20,7 +20,7 @@ Content-Transfer-Encoding: base64
 2LPZhNin2YUK2YbYsdmFINin2YHYstin2LEg2K/Ysdiu2YjYp9iz2Kog2LTYr9mHINix2Kcg2b7b
 jNmI2LPYqiDaqdix2K/ZhS4K
 
---===============4259780372128628395==
+--===============4195088438138059001==
 Content-Type: application/octet-stream; Name="email3/kerio_connect"
 MIME-Version: 1.0
 Content-Transfer-Encoding: base64
@@ -41,4 +41,4 @@ cyA9PSAiMjAwIiBdXTsgdGhlbgoJCXByaW50ZiAiXDAzM1sxbVwwMzNbOTJtWW91IEFyZSBDb25u
 ZWN0ZWQgTm93IVwwMzNbMG0iCgllbHNlCgkJcHJpbnRmICJcMDMzWzFtXDAzM1s5MW1Ob3QgQ29u
 bmVjdGVkIVwwMzNbMG0iCglmaQoJcHJpbnRmICJcblxuIgplc2FjCg==
 
---===============4259780372128628395==--
+--===============4195088438138059001==--

