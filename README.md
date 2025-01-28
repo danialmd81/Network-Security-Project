@@ -1,60 +1,69 @@
 # Network Security Project
 
-This project focuses on various aspects of network security, including cryptographic attacks and tools for RSA encryption analysis.
+A comprehensive collection of solutions for the Mazapa cybersecurity challenges, focused on network penetration testing, forensics, and cryptography.
 
-## Project Structure
+## Overview
 
-The project is structured as follows:
-0 [Sanity Check](./0_sanity_check/)
-1 [Website](./1_website/)
-2 [Mail Server](./2_mail_server/)
-3 [PC3](./3_PC3/)
-4 [VPN Server](./4_VPN_server/)
-5 [PC2](./5_PC2/)
-6 [Project Management](./6_project_management/)
+This repository contains detailed solutions and methodologies for various cybersecurity challenges presented in the Network Security course at Isfahan University of Technology. Each challenge focuses on different aspects of network security and penetration testing.
 
-## Getting Started
+## Challenge Categories
 
-To get started with this project, clone the repository and navigate to the desired folder to explore the specific tasks and challenges.
+1. [Sanity Check](./0_sanity_check/) - Initial verification tests
+2. [Website Exploitation](./1_website/) - Web application security testing
+3. [Mail Server Analysis](./2_mail_server/) - Email server vulnerabilities
+4. [System Penetration](./3_PC3/) - System-level exploitation
+5. [VPN Security](./4_VPN_server/) - VPN configuration and testing
+6. [Network Analysis](./5_PC2/) - Network traffic analysis
+7. [Security Management](./6_project_management/) - Project documentation
 
-```shell
+## Skill Roadmaps
+
+Interactive learning paths for key security domains:
+
+- [Web Penetration Testing](./roadmaps/Web%20Penetration%20Testing.svg)
+- [Reverse Engineering](./roadmaps/Reverse%20Engineering.svg)
+- [Binary Exploitation (PWN)](./roadmaps/PWN.svg)
+- [Digital Forensics](./roadmaps/Forensics.svg)
+- [Applied Cryptography](./roadmaps/Cryptography.svg)
+
+## Quick Start
+
+```bash
 git clone https://github.com/yourusername/network-security-project.git
 cd network-security-project
 ```
 
-## Prerequisites
+## Required Tools
 
-Ensure you have the following tools installed on your system:
+### Network Analysis
 
-- Python 3.x
 - OpenVPN
 - SSH
-- Metasploit
-- Hashcat
-- John The Ripper
-- BurpSuite
-- CyberChef
 - Netcat
 
-## Tools Used
+### Web Security
 
-This project utilizes a variety of tools for different tasks:
+- BurpSuite
+- Python 3.x
+- CyberChef
 
-- **Python**: For scripting and running tools like RsaCtfTool.
-- **OpenVPN**: For establishing VPN connections.
-- **SSH**: For secure shell access to servers.
-- **Metasploit**: For exploiting vulnerabilities.
-- **Hashcat**: For password cracking.
-- **John The Ripper**: For password cracking.
-- **BurpSuite**: For web application security testing.
-- **CyberChef**: For data manipulation and decoding.
-- **Netcat**: For network communication and creating reverse shells.
-- **RsaCtfTool**: For performing cryptographic attacks on RSA keys.
+### Password & Crypto
 
-## Contributing
+- Hashcat
+- John The Ripper
+- RsaCtfTool
 
-Contributions are welcome! Please read the code and understand how it works before making any changes. Feel free to send pull requests with improvements or new features.
+### Exploitation
+
+- Metasploit Framework
+
+## Contribution Guidelines
+
+1. Review existing solutions
+2. Test your changes thoroughly
+3. Submit pull requests with clear descriptions
+4. Follow security best practices
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
+MIT License - See [LICENSE](./LICENSE) file
