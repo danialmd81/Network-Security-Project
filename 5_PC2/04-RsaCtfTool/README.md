@@ -30,6 +30,7 @@ It is essential to highlight that the tool, exclusively supports the RSA textboo
 For an advanced integer factorization tool please use [msieve](https://github.com/RsaCtfTool/msieve), [yafu](https://github.com/bbuhrow/yafu), or [cado-nfs](https://gitlab.inria.fr/cado-nfs/cado-nfs).
 
 This tool is meant for educational purposes. For those participating in CTFs, please do the following first:
+
 * Learn the basics of RSA math and understand number theory, modular arithmetic, integer factorization and the fundamental theorem of arithmetic.
 * Read the code in this repository to understand what it does and how it works and suggest improvements by sending pull requests.
 * Avoid copy-pasting and running the tool without understanding the underlying math, as knowing the math is more valuable than knowing how to run the tool.
@@ -38,63 +39,63 @@ We hope this tool enhances your understanding of RSA encryption and serves as a 
 
 __Attacks provided:__
 
-- Attacks that don't depend on the factorization of integers (may depend on knowing n,e,ciphertext,etc...):
-  - [Wiener's attack](https://en.wikipedia.org/wiki/Wiener%27s_attack)
-  - Hastad's attack (Small public exponent)
-  - [Boneh Durfee Method when the private exponent d is too small compared to the modulus (i.e., d < n^0.292)](https://staff.emu.edu.tr/alexanderchefranov/Documents/CMSE491/Fall2019/BonehIEEETIT2000%20Cryptanalysis%20of%20RSA.pdf)
-  - Same n, huge e
-  - [Small CRT exponent](https://en.wikipedia.org/wiki/Chinese_remainder_theorem)
-  - Common factor between ciphertext and modulus
-  - Partial q
-  - Partial d
-  - [Simple lattice reduction](https://en.wikipedia.org/wiki/Lattice_reduction)
+* Attacks that don't depend on the factorization of integers (may depend on knowing n,e,ciphertext,etc...):
+  * [Wiener's attack](https://en.wikipedia.org/wiki/Wiener%27s_attack)
+  * Hastad's attack (Small public exponent)
+  * [Boneh Durfee Method when the private exponent d is too small compared to the modulus (i.e., d < n^0.292)](https://staff.emu.edu.tr/alexanderchefranov/Documents/CMSE491/Fall2019/BonehIEEETIT2000%20Cryptanalysis%20of%20RSA.pdf)
+  * Same n, huge e
+  * [Small CRT exponent](https://en.wikipedia.org/wiki/Chinese_remainder_theorem)
+  * Common factor between ciphertext and modulus
+  * Partial q
+  * Partial d
+  * [Simple lattice reduction](https://en.wikipedia.org/wiki/Lattice_reduction)
 
-- Strict Integer factorization methods (only depends on knowing n):
-  - Weak public key factorization
-  - Small q (q < 100,000)
-  - [Fermat's factorization for close p and q](https://en.wikipedia.org/wiki/Fermat%27s_factorization_method)
-  - Gimmicky Primes method
-  - Past CTF Primes method
-  - Non-RSA key in the form b^x, where b is the prime
-  - Common factor attacks across multiple keys
-  - Small fractions method when p/q is close to a small fraction
-  - [Elliptic Curve Method](https://en.wikipedia.org/wiki/Lenstra_elliptic-curve_factorization)
-  - [Pollards p-1 for relatively smooth numbers](https://en.wikipedia.org/wiki/Pollard%27s_p_%E2%88%92_1_algorithm)
-  - Mersenne primes factorization
-  - [Factordb](http://factordb.com/)
-  - [Londahl](https://web.archive.org/web/20220525193825/https://grocid.net/2017/09/16/finding-close-prime-factorizations/)
-  - Noveltyprimes
-  - [Qicheng](https://www.cs.ou.edu/~qcheng/paper/speint.pdf)
-  - binary polynomial factoring
-  - [Euler method](https://en.wikipedia.org/wiki/Euler_method)
-  - [Pollard Rho](https://en.wikipedia.org/wiki/Pollard%27s_rho_algorithm)
-  - [Wolfram alpha](https://www.wolframalpha.com/)
-  - [Z3 theorem prover](https://en.wikipedia.org/wiki/Z3_Theorem_Prover)
-  - [Primorial pm1 gcd](https://en.wikipedia.org/wiki/Primorial)
-  - [Mersenne Numbers pm1 gcd](https://en.wikipedia.org/wiki/Mersenne_prime)
-  - [Factorial pm1 gcd](https://en.wikipedia.org/wiki/Factorial)
-  - [Compositorial pm1 gcd](https://oeis.org/wiki/Compositorial)
-  - [Fermat Numbers gcd](https://en.wikipedia.org/wiki/Fermat_number)
-  - [Fibonacci Numbers gcd](https://en.wikipedia.org/wiki/Fibonacci_sequence)
-  - System primes gcd
-  - [Shanks's square forms factorization (SQUFOF)](https://en.wikipedia.org/wiki/Shanks%27s_square_forms_factorization)
-  - [Return of Coppersmith's Attack (ROCA) with NECA variant](https://en.wikipedia.org/wiki/ROCA_vulnerability)
-  - [Dixon](https://en.wikipedia.org/wiki/Dixon%27s_factorization_method)
-  - brent (Pollard rho variant)
-  - [Pisano Period](https://en.wikipedia.org/wiki/Pisano_period)
-  - XYXZ form integer factorization where P prime > X^Y and Q prime > X^Z
-  - High and Low Bits Equal
-  - [Williams p+1](https://en.wikipedia.org/wiki/Williams%27s_p_%2B_1_algorithm)
-  - [Hart algorithm (similar to Fermat)](http://wrap.warwick.ac.uk/54707/1/WRAP_Hart_S1446788712000146a.pdf)
-  - [Lehmer machine (similar to Fermat)](https://en.wikipedia.org/wiki/Lehmer_sieve)
-  - 2PN special form where P is prime > 2 and sqrt(2PN) is close to (Pp + 2q)/2
-  - [Kraitchik algorithm (an improvement over Fermat)](https://en.wikipedia.org/wiki/Fermat%27s_factorization_method)
-  - Lehman algorithm improvement over Fermat
-  - Carmichael algorithm
-  - [Quadratic sieve](https://en.wikipedia.org/wiki/Quadratic_sieve)
-  - [Classical part of Shor algorithm](https://en.wikipedia.org/wiki/Shor%27s_algorithm)
-  - [Lucas Numbers gcd](https://en.wikipedia.org/wiki/Lucas_number)
-  - [Rapid7 gcd prime dataset](https://opendata.rapid7.com/sonar.ssl/)
+* Strict Integer factorization methods (only depends on knowing n):
+  * Weak public key factorization
+  * Small q (q < 100,000)
+  * [Fermat's factorization for close p and q](https://en.wikipedia.org/wiki/Fermat%27s_factorization_method)
+  * Gimmicky Primes method
+  * Past CTF Primes method
+  * Non-RSA key in the form b^x, where b is the prime
+  * Common factor attacks across multiple keys
+  * Small fractions method when p/q is close to a small fraction
+  * [Elliptic Curve Method](https://en.wikipedia.org/wiki/Lenstra_elliptic-curve_factorization)
+  * [Pollards p-1 for relatively smooth numbers](https://en.wikipedia.org/wiki/Pollard%27s_p_%E2%88%92_1_algorithm)
+  * Mersenne primes factorization
+  * [Factordb](http://factordb.com/)
+  * [Londahl](https://web.archive.org/web/20220525193825/https://grocid.net/2017/09/16/finding-close-prime-factorizations/)
+  * Noveltyprimes
+  * [Qicheng](https://www.cs.ou.edu/~qcheng/paper/speint.pdf)
+  * binary polynomial factoring
+  * [Euler method](https://en.wikipedia.org/wiki/Euler_method)
+  * [Pollard Rho](https://en.wikipedia.org/wiki/Pollard%27s_rho_algorithm)
+  * [Wolfram alpha](https://www.wolframalpha.com/)
+  * [Z3 theorem prover](https://en.wikipedia.org/wiki/Z3_Theorem_Prover)
+  * [Primorial pm1 gcd](https://en.wikipedia.org/wiki/Primorial)
+  * [Mersenne Numbers pm1 gcd](https://en.wikipedia.org/wiki/Mersenne_prime)
+  * [Factorial pm1 gcd](https://en.wikipedia.org/wiki/Factorial)
+  * [Compositorial pm1 gcd](https://oeis.org/wiki/Compositorial)
+  * [Fermat Numbers gcd](https://en.wikipedia.org/wiki/Fermat_number)
+  * [Fibonacci Numbers gcd](https://en.wikipedia.org/wiki/Fibonacci_sequence)
+  * System primes gcd
+  * [Shanks's square forms factorization (SQUFOF)](https://en.wikipedia.org/wiki/Shanks%27s_square_forms_factorization)
+  * [Return of Coppersmith's Attack (ROCA) with NECA variant](https://en.wikipedia.org/wiki/ROCA_vulnerability)
+  * [Dixon](https://en.wikipedia.org/wiki/Dixon%27s_factorization_method)
+  * brent (Pollard rho variant)
+  * [Pisano Period](https://en.wikipedia.org/wiki/Pisano_period)
+  * XYXZ form integer factorization where P prime > X^Y and Q prime > X^Z
+  * High and Low Bits Equal
+  * [Williams p+1](https://en.wikipedia.org/wiki/Williams%27s_p_%2B_1_algorithm)
+  * [Hart algorithm (similar to Fermat)](http://wrap.warwick.ac.uk/54707/1/WRAP_Hart_S1446788712000146a.pdf)
+  * [Lehmer machine (similar to Fermat)](https://en.wikipedia.org/wiki/Lehmer_sieve)
+  * 2PN special form where P is prime > 2 and sqrt(2PN) is close to (Pp + 2q)/2
+  * [Kraitchik algorithm (an improvement over Fermat)](https://en.wikipedia.org/wiki/Fermat%27s_factorization_method)
+  * Lehman algorithm improvement over Fermat
+  * Carmichael algorithm
+  * [Quadratic sieve](https://en.wikipedia.org/wiki/Quadratic_sieve)
+  * [Classical part of Shor algorithm](https://en.wikipedia.org/wiki/Shor%27s_algorithm)
+  * [Lucas Numbers gcd](https://en.wikipedia.org/wiki/Lucas_number)
+  * [Rapid7 gcd prime dataset](https://opendata.rapid7.com/sonar.ssl/)
 
 ## Usage
 
@@ -106,21 +107,20 @@ usage: RsaCtfTool.py [-h] [--publickey PUBLICKEY] [--output OUTPUT] [--timeout T
                      [--sendtofdb] [--isconspicuous] [--isroca] [--convert_idrsa_pub] [--check_publickey] [--partial]
 ```
 
-
 Mode 1 : Attack RSA (specify --publickey or n and e)
 
-- publickey : public rsa key to crack. You can import multiple public keys with wildcards.
-- decrypt : cipher message to decrypt
-- private : display private rsa key if recovered
+* publickey : public rsa key to crack. You can import multiple public keys with wildcards.
+* decrypt : cipher message to decrypt
+* private : display private rsa key if recovered
 
 Mode 2 : Create a Public Key File Given n and e (specify --createpub)
 
-- n : modulus
-- e : public exponent
+* n : modulus
+* e : public exponent
 
 Mode 3 : Dump the public and/or private numbers (optionally including CRT parameters in extended mode) from a PEM/DER format public or private key (specify --dumpkey)
 
-- key : the public or private key in PEM or DER format
+* key : the public or private key in PEM or DER format
 
 ### Decrypt file
 
@@ -133,7 +133,6 @@ Mode 3 : Dump the public and/or private numbers (optionally including CRT parame
 ### Attempt to break multiple public keys with common factor attacks or individually- use quotes around wildcards to stop bash expansion
 
 `./RsaCtfTool.py --publickey "*.pub" --private`
-
 
 ### Optionally send the results back to factordb
 
@@ -169,7 +168,6 @@ For more examples, look at the test.sh file
 
 `./RsaCtfTool.py  --convert_idrsa_pub --publickey $HOME/.ssh/id_rsa.pub`
 
-
 ### Check if a given key or keys are roca ###
 
 `./RsaCtfTool.py --isroca --publickey "examples/*.pub"`
@@ -181,10 +179,10 @@ docker pull rsactftool/rsactftool
 docker run -it --rm -v $PWD:/data rsactftool/rsactftool <arguments>
 ```
 
-
 ### Virtual environment run ###
 
 Setup the venv
+
 ```bash
 virtualenv venv
 source venv/bin/activate
@@ -192,6 +190,7 @@ pip3 install -r requirements.txt
 ```
 
 Run
+
 ```bash
 source venv/bin/activate
 ./RsaCtfTool.py <arguments>
@@ -199,13 +198,13 @@ source venv/bin/activate
 
 ## Requirements
 
-- python3.9
-- GMPY2
-- PyCrypto
-- Requests
-- Libnum
-- SageMath : optional but advisable
-- Sage binaries
+* python3.9
+* GMPY2
+* PyCrypto
+* Requests
+* Libnum
+* SageMath : optional but advisable
+* Sage binaries
 
 ### Ubuntu 18.04 and Kali specific Instructions
 
@@ -217,8 +216,8 @@ pip3 install -r "requirements.txt"
 ./RsaCtfTool.py
 ```
 
-
 ### Fedora (33 and above) specific Instructions
+
 ```bash
 git clone https://github.com/RsaCtfTool/RsaCtfTool.git
 sudo dnf install gcc python3-devel python3-pip python3-wheel gmp-devel mpfr-devel libmpc-devel
@@ -228,6 +227,7 @@ pip3 install -r "requirements.txt"
 ```
 
 If you also want the optional SageMath , you need to do
+
 ```bash
 sudo dnf install sagemath
 pip3 install -r "optional-requirements.txt"
@@ -242,20 +242,21 @@ If `pip3 install -r "requirements.txt"` fails to install requirements accessible
 If you installed gmpy2 with homebrew(`brew install gmp`), you might have to point clang towards the header files with this command:
 ``CFLAGS=-I/opt/homebrew/include LDFLAGS=-L/opt/homebrew/lib pip3 install -r requirements.txt``
 
-### Optional to factor roca keys upto 512 bits, Install neca:
+### Optional to factor roca keys upto 512 bits, Install neca
+
 You can follow the instructions at : `https://www.mersenneforum.org/showthread.php?t=23087`
 
 ## TODO (aka. Help wanted !)
 
-- Implement a test method for each attack.
-- Assign the correct algorithm complexity in **Big O** notation for each attack.
-- Support multiprime RSA, the project currently supports textbook RSA.
-- Wanted feature: Ransomware decrypter.
+* Implement a test method for each attack.
+* Assign the correct algorithm complexity in __Big O__ notation for each attack.
+* Support multiprime RSA, the project currently supports textbook RSA.
+* Wanted feature: Ransomware decrypter.
 
 ## Contributing
 
-- Please read the [CONTRIBUTING.md](CONTRIBUTING.md) guideline for the bare minimum acceptable PRs.
-- Also please read the [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md), any contribution of any user not honoring it will ignored and the user blocked, good manners are paramount.
+* Please read the [CONTRIBUTING.md](CONTRIBUTING.md) guideline for the bare minimum acceptable PRs.
+* Also please read the [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md), any contribution of any user not honoring it will ignored and the user blocked, good manners are paramount.
 
 ## Thanks to all our Contributors
 

@@ -1,6 +1,6 @@
 # PC2
 
-1. **Resume From [VPN Server](<../4_VPN server>)**
+1. **Resume From [VPN Server](<../4_VPN_server/>)**
 2. **Email Server, rsa Key: [SSH RSA](../2_mail_server/08-store0/4/msg/0/257-2.msg)**
 
     ```text
